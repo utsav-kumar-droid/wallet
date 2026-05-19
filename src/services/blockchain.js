@@ -8,9 +8,10 @@ const ECPair = ECPairFactory(ecc);
 
 // --- RPC URLs ---
 // V IMPORTANT: REPLACE WITH YOUR ACTUAL GETBLOCK API KEY
-const ETH_RPC_URL = 'https://shared.us-east-1.getblock.io/68f9184d0b2a48e29b13343f95aacb58';
-export const SOL_RPC_URL = 'https://shared.us-east-1.getblock.io/d1804f9f74d74aa4b0078a9cc0ae8ee2';
-
+const ETH_RPC_URL =
+  import.meta.env.VITE_ETH_RPC_URL;
+export const SOL_RPC_URL =
+  import.meta.env.VITE_SOL_RPC_URL;
 // --- Balance Fetching ---
 export async function getEthBalance(address) {
   const provider = new ethers.JsonRpcProvider(ETH_RPC_URL);
